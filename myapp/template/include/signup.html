@@ -1,0 +1,30 @@
+{% include 'include/base.html'%}
+{% block content %}
+<div class="col-sm-5 shadow mx-auto p-5">
+   <h4 class="text-center alert alert-success">USER SIGNUP</h4>
+  <div class="p-4">
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Full Name" name="username">
+      </div>
+      <hr>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email" name="email">
+      </div>
+      <hr>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" name="password1">
+      </div>
+      <hr>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Confirm Password" name="password2">
+      </div>
+      <hr>
+      <input type="submit"  class="text-center btn btn-info" value="signup">
+      <a href="/login/">Already have Account!!!!   LOGIN here</a>
+    </form>
+  </div>
+
+</div>
+{% endblock content %}

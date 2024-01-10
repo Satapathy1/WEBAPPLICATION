@@ -1,0 +1,22 @@
+{% extends 'include/base.html'%}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+<div class="col-sm-5 shadow mx-auto p-4">
+    <h3 class="text-center alert alert-success">UPLOAD IMAGE</h3>
+    <div class="p-4">
+
+<form action="{% url 'gallery' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <select name="image_type">
+        <option value="Portrait">Portrait</option>
+        <option value="Landscape">Landscape</option>
+    </select> <br><br>
+    <input type="file" name="image"> <br><br>
+    <input type="submit" value="Upload">
+</form>
+    </div>
+</div>
+    </div>
+</div>
+{% endblock %}
